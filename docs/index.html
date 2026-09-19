@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release Timeline Automator — Cumulative Web Inc</title>
+<meta name="description" content="Given a release date, generates the dated task list + content specs for a 6-week release cycle and a 4-week post-release waterfall. $0, zero deps, runs entirely in your browser.">
+<style>
+:root{--bg:#0c0f14;--card:#141a23;--line:#26303d;--ink:#eef3f8;--dim:#9aa7b8;--gold:#d8a94a;--cyan:#4ad8d0;--red:#e0655a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,system-ui,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:28px 18px 64px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.badge{width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-size:26px;flex:0 0 auto}
+h1{font-size:1.5rem;margin:0}h1 small{display:block;color:var(--dim);font-weight:400;font-size:.85rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:18px}
+label{display:block;font-size:.8rem;color:var(--dim);margin:10px 0 4px}
+input[type=date],input[type=text]{width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:#0e131a;color:var(--ink);font-size:1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:640px){.row{grid-template-columns:1fr}}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+button{cursor:pointer;border:0;border-radius:10px;padding:11px 18px;font-weight:700;font-size:.95rem}
+.primary{background:var(--gold);color:#141414}
+.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.check{display:flex;gap:8px;align-items:center;margin-top:12px;color:var(--dim);font-size:.9rem}
+.note{font-size:.82rem;color:var(--dim);margin-top:10px}
+.warn{background:#2a1a16;border:1px solid var(--red);color:#f3b3ac;border-radius:10px;padding:10px 14px;margin-top:14px;font-size:.9rem}
+.phase{margin-top:26px}
+.phase h2{font-size:1.05rem;margin:0 0 2px;color:var(--gold)}
+.phase .range{color:var(--dim);font-size:.8rem;margin-bottom:10px}
+.task{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0}
+.task .d{font-size:.78rem;color:var(--cyan);font-weight:700;letter-spacing:.03em}
+.task .t{font-weight:700;margin:2px 0}
+.task .x{font-size:.88rem;color:var(--dim)}
+.task .w{font-size:.8rem;color:#b9c7d8;margin-top:6px}
+.moved{color:var(--red);font-size:.78rem;font-weight:700}
+footer{margin-top:44px;color:var(--dim);font-size:.8rem;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="badge">👑</div>
+<div><h1>Release Timeline Automator <small>Cumulative Web Inc · $0 · zero deps · runs 100% in your browser</small></h1></div>
+</header>
+
+<div class="panel">
+<div class="row">
+<div><label for="title">Release title (optional)</label><input id="title" type="text" placeholder="e.g. That Boy Hi Hat — Diabolique (Deluxe)"></div>
+<div><label for="date">Release date</label><input id="date" type="date"></div>
+</div>
+<label class="check"><input id="shift" type="checkbox" checked> Shift business tasks (distributor, editorial, press) off weekends onto the preceding Friday</label>
+<div class="btnrow">
+<button class="primary" id="gen">Generate timeline</button>
+<button class="ghost" id="copy" disabled>Copy as text</button>
+<button class="ghost" id="ics" disabled>Download .ics</button>
+</div>
+<div class="note">Timing guidance: 2026 platform research compiled 2026-09-18. Confidence varies per platform — shown on each task. Tune against your own analytics. All hours US Eastern (ET).</div>
+<div id="warn"></div>
+</div>
+
+<div id="out"></div>
+
+<footer>
+Built by Cumulative Web Inc · CWI Agent Company. Deterministic engine — the same date always produces the same timeline; nothing leaves your browser.
+</footer>
+</div>
+<script src="timeline.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
