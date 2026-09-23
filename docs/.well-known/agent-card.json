@@ -1,0 +1,1 @@
+{"description":"$0 countdown generator for music releases: dated task list + content specs from T-6 weeks to 4 weeks post-release, with 2026 platform timing guidance. Deterministic engine, runs 100% in the browser.","name":"CWI Release Timeline Automator","protocols":["cwi.release-timeline/1.0"],"url":"https://cumulativewebinc.github.io/cwi-release-timeline/"}

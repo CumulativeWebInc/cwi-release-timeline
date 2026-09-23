@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Release Timeline Automator — Cumulative Web Inc</title>
 <meta name="description" content="Given a release date, generates the dated task list + content specs for a 6-week release cycle and a 4-week post-release waterfall. $0, zero deps, runs entirely in your browser.">
+<meta property="og:title" content="Release Timeline Automator · Cumulative Web Inc">
+<meta property="og:description" content="$0 countdown generator for music releases: dated task list + content specs from T-6 weeks to 4 weeks post-release. Deterministic, runs 100% in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cumulativewebinc.github.io/cwi-release-timeline/">
+<meta property="og:image" content="https://cumulativewebinc.github.io/cwi-release-timeline/brand/cwi-logo.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Release Timeline Automator · Cumulative Web Inc">
+<meta name="twitter:description" content="Music release countdown generator: dated tasks + content specs, deterministic, $0, in-browser.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"CWI Release Timeline Automator","url":"https://cumulativewebinc.github.io/cwi-release-timeline/","applicationCategory":"MusicApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Cumulative Web Inc","url":"https://cumulativeweb.com"},"description":"$0 countdown generator for music releases. Given a release date, outputs the dated task list and content specs for the full release cycle (T-6wk distributor freeze through 4-week post-release micro-asset waterfall). Deterministic engine — same date always produces the same timeline."}
+</script>
 <style>
 :root{--bg:#0c0f14;--card:#141a23;--line:#26303d;--ink:#eef3f8;--dim:#9aa7b8;--gold:#d8a94a;--cyan:#4ad8d0;--red:#e0655a}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,system-ui,Segoe UI,Roboto,sans-serif}
@@ -38,7 +49,7 @@ footer{margin-top:44px;color:var(--dim);font-size:.8rem;border-top:1px solid var
 <body>
 <div class="wrap">
 <header>
-<div class="badge">👑</div>
+<img src="brand/cwi-logo.jpg" alt="Cumulative Web Inc logo" style="width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;flex:0 0 auto">
 <div><h1>Release Timeline Automator <small>Cumulative Web Inc · $0 · zero deps · runs 100% in your browser</small></h1></div>
 </header>
 
@@ -59,8 +70,18 @@ footer{margin-top:44px;color:var(--dim);font-size:.8rem;border-top:1px solid var
 
 <div id="out"></div>
 
+<div class="panel" style="text-align:center">
+<h2 style="margin-top:0">Releasing music on a real plan?</h2>
+<p style="color:var(--dim)">The Release Timeline Automator is a CWI product — release-cycle planning, content waterfalls, and peak-hour scheduling built from 2026 platform research.</p>
+<div class="btnrow" style="justify-content:center">
+<a href="mailto:hp@cumulativeweb.com?subject=Release%20planning%20for%20my%20drop" style="display:inline-block;background:var(--gold);color:#111;font-weight:700;border-radius:10px;padding:11px 18px;text-decoration:none">Contact hp@cumulativeweb.com</a>
+<a href="https://cumulativewebinc.github.io/cwi-release-timeline/" style="display:inline-block;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:11px 18px;text-decoration:none">Try the live planner →</a>
+</div>
+<p style="color:var(--dim);font-size:.85rem">A Cumulative Web Inc product. Pricing on request — no prices are published without approval.</p>
+</div>
+
 <footer>
-Built by Cumulative Web Inc · CWI Agent Company. Deterministic engine — the same date always produces the same timeline; nothing leaves your browser.
+© 2026 Cumulative Web Inc · Built by Cumulative Web Inc · CWI Agent Company. Deterministic engine — the same date always produces the same timeline; nothing leaves your browser. · <a href="mailto:hp@cumulativeweb.com" style="color:var(--cyan)">hp@cumulativeweb.com</a> · <a href="llms.txt" style="color:var(--cyan)">llms.txt</a> · <a href=".well-known/agent-card.json" style="color:var(--cyan)">agent card</a>
 </footer>
 </div>
 <script src="timeline.js"></script>

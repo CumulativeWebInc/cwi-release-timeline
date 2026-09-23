@@ -1,0 +1,38 @@
+# CWI Release Timeline Automator
+
+> A countdown generator that turns a release date into the exact dated task
+> list and content specs for a 6-week release cycle and a 4-week post-release
+> waterfall — without paying $49/month for the same math.
+
+- Live app: https://cumulativewebinc.github.io/cwi-release-timeline/
+- Repo: https://github.com/CumulativeWebInc/cwi-release-timeline
+- $0, zero dependencies, runs 100% in the browser — nothing leaves your device.
+
+## What it generates
+
+- Dated task list: T-6wk distributor freeze, T-5wk playlist pitching,
+  T-4wk social, T-2wk first single, T-1wk pre-save, release-day blitz —
+  business tasks (distributor, editorial, press) shifted off weekends to the
+  preceding Friday.
+- 4-week post-release waterfall: 25 micro-assets mapped to day windows
+  (T+1 through T+28), platform-specific formats (Reels/Shorts/TikTok/Clips),
+  hook lines, hashtags, captions.
+- 2026 platform timing guidance compiled 2026-09-18, with per-platform
+  confidence levels; tuned guidance in the app. All hours US Eastern.
+
+## Honest limits
+
+- Deterministic engine (docs/timeline.js): same inputs, same output — always.
+- Timing guidance is research, not a guarantee; the app says so on each task.
+- Honest note: this repo publishes no formal kill rule; the app's value is
+  judged by real releases planned with it, not by a date on a page.
+
+## Tests
+
+`node --test test/timeline.test.js` — 11/11 green.
+
+## Machine-readable
+
+- docs/.well-known/agent-card.json — agent discovery card
+
+© 2026 Cumulative Web Inc · hp@cumulativeweb.com
